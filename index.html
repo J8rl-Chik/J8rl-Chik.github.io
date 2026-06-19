@@ -16,485 +16,195 @@
     <div class="layout">
       <aside class="sidebar">
         <section class="profile">
-          <h1 class="profile__name">류준식</h1>
-          <small class="profile__role">JUNIOR DEVELOPER</small>
-          <div class="profile__divider"></div>
-          <address class="profile__contact">
-            <a href="mailto:fe.ryujoonsik@gmail.com" class="profile__contact-link">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-                <path
-                  fill="currentColor"
-                  fill-rule="evenodd"
-                  d="M14.95 3.684L8.637 8.912a1 1 0 0 1-1.276 0l-6.31-5.228A.999.999 0 0 0 1 4v8a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4a.999.999 0 0 0-.05-.316M2 2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2m-.21 1l5.576 4.603a1 1 0 0 0 1.27.003L14.268 3z"
-                />
-              </svg>
-              fe.ryujoonsik@gmail.com
-            </a>
-            <a href="https://github.com/ryujoonsik" target="_blank" class="profile__contact-link">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 432 416">
-                <path
-                  fill="currentColor"
-                  d="M213.5 0q88.5 0 151 62.5T427 213q0 70-41 125.5T281 416q-14 2-14-11v-58q0-27-15-40q44-5 70.5-27t26.5-77q0-34-22-58q11-26-2-57q-18-5-58 22q-26-7-54-7t-53 7q-18-12-32.5-17.5T107 88h-6q-12 31-2 57q-22 24-22 58q0 55 27 77t70 27q-11 10-13 29q-42 18-62-18q-12-20-33-22q-2 0-4.5.5t-5 3.5t8.5 9q14 7 23 31q1 2 2 4.5t6.5 9.5t13 10.5T130 371t30-2v36q0 13-14 11q-64-22-105-77.5T0 213q0-88 62.5-150.5T213.5 0z"
-                />
-              </svg>
-              github.com/ryujoonsik
-            </a>
-          </address>
-          <dl class="profile__education">
-            <div class="profile__education-pair">
-              <dt class="profile__education-term">
+          <h2 class="profile__title">Profile</h2>
+          <div class="profile__image-container">
+            <img src="./profile.jpg" alt="류준식" class="profile__image" />
+          </div>
+          <div class="profile__text">
+            <span class="profile__name">류준식</span>
+            <span class="profile__role">JUNIOR DEVELOPER</span>
+          </div>
+        </section>
+        <hr class="divider" />
+        <address class="contact">
+          <h2 class="contact__title">Contact</h2>
+          <a href="mailto:fe.ryujoonsik@gmail.com" class="contact__link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+              <path
+                fill="currentColor"
+                fill-rule="evenodd"
+                d="M14.95 3.684L8.637 8.912a1 1 0 0 1-1.276 0l-6.31-5.228A.999.999 0 0 0 1 4v8a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4a.999.999 0 0 0-.05-.316M2 2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2m-.21 1l5.576 4.603a1 1 0 0 0 1.27.003L14.268 3z"
+              />
+            </svg>
+            fe.ryujoonsik@gmail.com
+          </a>
+          <a href="https://github.com/ryujoonsik" target="_blank" class="contact__link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 432 416">
+              <path
+                fill="currentColor"
+                d="M213.5 0q88.5 0 151 62.5T427 213q0 70-41 125.5T281 416q-14 2-14-11v-58q0-27-15-40q44-5 70.5-27t26.5-77q0-34-22-58q11-26-2-57q-18-5-58 22q-26-7-54-7t-53 7q-18-12-32.5-17.5T107 88h-6q-12 31-2 57q-22 24-22 58q0 55 27 77t70 27q-11 10-13 29q-42 18-62-18q-12-20-33-22q-2 0-4.5.5t-5 3.5t8.5 9q14 7 23 31q1 2 2 4.5t6.5 9.5t13 10.5T130 371t30-2v36q0 13-14 11q-64-22-105-77.5T0 213q0-88 62.5-150.5T213.5 0z"
+              />
+            </svg>
+            github.com/ryujoonsik
+          </a>
+        </address>
+        <hr class="divider" />
+        <section class="education">
+          <h2 class="education__title">Education</h2>
+          <dl class="education__list">
+            <div class="education__item">
+              <dt class="education__term">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
                   height="16"
                   viewBox="0 0 1024 1024"
                 >
-                  <title>학력</title>
                   <path
                     fill="currentColor"
                     d="M990.848 696.304V438.16l16.096-8.496c10.464-5.44 17.055-16.225 17.183-28.032c.128-11.777-6.256-22.689-16.592-28.368l-481.44-257.6c-9.631-5.28-21.28-5.249-30.976.095l-478.8 257.92C6.126 379.36-.177 390.143-.113 401.84s6.496 22.4 16.817 27.97l210.384 111.983c-2.64 4.656-4.272 9.968-4.272 15.696v270.784a32.03 32.03 0 0 0 10.72 23.904c6.945 6.16 73.441 60.096 276.753 60.096c202.592 0 270.88-50.976 278-56.784c7.44-6.064 11.744-15.152 11.744-24.784V552.976c0-4.496-.944-8.768-2.608-12.64l129.424-68.369V696.48c-18.976 11.104-31.84 31.472-31.84 55.024c0 35.344 28.656 64 64 64s64-28.656 64-64c0-23.697-13.04-44.145-32.16-55.2zM736.031 812.368c-25.152 12.096-91.712 35.904-225.744 35.904c-134.88 0-199.936-25.344-223.472-37.536V573.6l207.808 110.624a31.896 31.896 0 0 0 15.184 3.84a31.675 31.675 0 0 0 14.816-3.664l211.408-111.664v239.632zM510.063 619.81l-411.6-218.561l412.32-220.976l413.6 220.336z"
                   />
                 </svg>
+                <span class="sr-only">학력</span>
               </dt>
-              <dd>울산과학대학교 컴퓨터공학과</dd>
+              <dd>울산과학대학교 컴퓨터정보학부 졸업</dd>
             </div>
-            <div class="profile__education-pair">
-              <dt class="profile__education-term">
+            <div class="education__item">
+              <dt class="education__term">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 20 20">
                   <path
                     fill="currentColor"
                     d="M2.727 3.333c-.753 0-1.363.597-1.363 1.334v10.666c0 .737.61 1.334 1.363 1.334h14.546c.753 0 1.363-.597 1.363-1.334V4.667c0-.737-.61-1.334-1.363-1.334H2.727ZM17.273 2C18.779 2 20 3.194 20 4.667v10.666C20 16.806 18.779 18 17.273 18H2.727C1.221 18 0 16.806 0 15.333V4.667C0 3.194 1.221 2 2.727 2h14.546ZM8.167 13.133H4a.674.674 0 0 0-.682.667c0 .368.305.667.682.667h4.167a.674.674 0 0 0 .681-.667a.674.674 0 0 0-.681-.667Zm5.583-7.8c-1.524 0-2.765 1.191-2.765 2.667c0 .773.34 1.468.884 1.955c-1.03.608-1.717 1.703-1.717 2.954c0 .357.056.708.165 1.043c.115.35.499.544.857.432a.664.664 0 0 0 .442-.838a2.043 2.043 0 0 1-.1-.637c0-1.175.997-2.133 2.234-2.133s2.235.958 2.235 2.133c0 .173-.021.342-.063.506a.666.666 0 0 0 .497.808a.683.683 0 0 0 .826-.486c.069-.27.103-.547.103-.828c0-1.251-.687-2.346-1.717-2.956c.544-.485.884-1.18.884-1.953c0-1.476-1.24-2.667-2.765-2.667Zm-5.583 4.3H4a.674.674 0 0 0-.682.667c0 .368.305.667.682.667h4.167a.674.674 0 0 0 .681-.667a.674.674 0 0 0-.681-.667Zm5.583-2.966c.777 0 1.402.6 1.402 1.333c0 .734-.625 1.333-1.402 1.333c-.777 0-1.402-.6-1.402-1.333c0-.734.625-1.333 1.402-1.333Zm-5.583-.534H4a.674.674 0 0 0-.682.667c0 .368.305.667.682.667h4.167a.674.674 0 0 0 .681-.667a.674.674 0 0 0-.681-.667Z"
                   />
-                  <title>자격증</title>
                 </svg>
+                <span class="sr-only">자격증</span>
               </dt>
               <dd>정보처리산업기사</dd>
               <dd>정보보안산업기사</dd>
             </div>
           </dl>
         </section>
-        <div class="profile__divider"></div>
+        <hr class="divider" />
         <section class="tech-stack">
           <h2 class="tech-stack__title">TECH STACK</h2>
           <dl class="tech-stack__list">
             <div>
               <dt class="tech-stack__term">FRONTEND</dt>
-              <dd class="badge">React</dd>
+              <dd class="tech-stack__badge tech-stack__badge--HTML">HTML</dd>
+              <dd class="tech-stack__badge tech-stack__badge--CSS">CSS</dd>
+              <dd class="tech-stack__badge tech-stack__badge--JavaScript">JavaScript</dd>
+              <dd class="tech-stack__badge tech-stack__badge--React">React</dd>
             </div>
             <div>
               <dt class="tech-stack__term">BACKEND</dt>
-              <dd class="badge">Node.js</dd>
-              <dd class="badge">Express</dd>
-              <dd class="badge">MongoDB Atlas</dd>
+              <dd class="tech-stack__badge tech-stack__badge--Node.js">Node.js</dd>
+              <dd class="tech-stack__badge tech-stack__badge--Express">Express</dd>
+              <dd class="tech-stack__badge tech-stack__badge--MongoDB-Atlas">MongoDB Atlas</dd>
             </div>
             <div>
               <dt class="tech-stack__term">DEPLOYMENT</dt>
-              <dd class="badge">Render</dd>
+              <dd class="tech-stack__badge tech-stack__badge--Render">Render</dd>
             </div>
             <div>
               <dt class="tech-stack__term">COLLABORATION</dt>
-              <dd class="badge">GitHub</dd>
-              <dd class="badge">GitHub Discussions</dd>
-              <dd class="badge">GitHub Issues</dd>
+              <dd class="tech-stack__badge tech-stack__badge--GitHub">GitHub</dd>
+              <dd class="tech-stack__badge tech-stack__badge--Notion">Notion</dd>
             </div>
           </dl>
         </section>
       </aside>
       <main class="main">
         <h2 class="main__title">PROJECTS</h2>
-        <div class="projects">
-          <article class="project-card">
-            <header class="project-card__header">
-              <h3 class="project-card__title">Economic Quiz App</h3>
-              <p class="project-card__date"><time datetime="2026-05">May 2026</time> – Ongoing</p>
+        <div class="project-container">
+          <article class="project">
+            <header class="project__header">
+              <h3 class="project__title">Economic Quiz App</h3>
+              <p class="project__date"><time datetime="2026-05">May 2026</time> – Ongoing</p>
             </header>
-
-            <p class="project-card__desc">
+            <p class="project__desc">
               A web-based economic learning service designed for beginners to repeatedly learn
               economic terms through quizzes.
             </p>
-
-            <nav class="project-card__links">
-              <a href="#">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <circle cx="12" cy="12" r="10" />
-                  <line x1="2" y1="12" x2="22" y2="12" />
-                  <path
-                    d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
-                  />
+            <nav class="project__nav">
+              <a href="#" class="project__link">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" class="project__icon">
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <circle cx="7" cy="7" r="6.5" />
+                    <path
+                      d="M.5 7h13m-4 0A11.22 11.22 0 0 1 7 13.5A11.22 11.22 0 0 1 4.5 7A11.22 11.22 0 0 1 7 .5A11.22 11.22 0 0 1 9.5 7Z"
+                    />
+                  </g>
                 </svg>
-                Web Page
+                Web
               </a>
-              <a href="#">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
+              <a href="#" class="project__link">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="project__icon">
                   <path
-                    d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"
+                    fill="currentColor"
+                    d="M9.566 5.838a1.357 1.357 0 0 1-1.347-1.135L7.984 3.22a.452.452 0 0 0-.45-.378H1.818a.45.45 0 0 0-.454.447v13.422a.45.45 0 0 0 .454.447h16.364c.25 0 .454-.2.454-.447V6.285a.451.451 0 0 0-.454-.447H9.566Zm0-1.342h8.616c1.004 0 1.818.8 1.818 1.79V16.71c0 .988-.814 1.789-1.818 1.789H1.818C.814 18.5 0 17.699 0 16.71V3.29C0 2.3.814 1.5 1.818 1.5h5.716a1.81 1.81 0 0 1 1.797 1.514l.235 1.482Z"
                   />
                 </svg>
                 Repository
               </a>
-              <a href="#">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
-                  <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+              <a href="#" class="project__link">
+                <svg xmlns="http://www.w3.org/2000/svg" class="project__icon" viewBox="0 0 432 512">
+                  <path
+                    fill="currentColor"
+                    d="M67 512h362v-43H67q-22 0-22-21t22-21h362V0H67Q39 0 21 18.5T3 64v363h4q-4 12-4 21q0 27 18 45.5T67 512zM45 64q0-21 22-21h320v341H67q-8 0-22 4V64zm86 107h192v42H131v-42zm0-86h192v43H131V85z"
+                  />
                 </svg>
                 TIL
               </a>
-              <a href="#">
+              <a href="#" class="project__link">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <polyline points="1 4 1 10 7 10" />
-                  <path d="M3.51 15a9 9 0 1 0 .49-3.67" />
-                </svg>
-                Retrospective
-              </a>
-            </nav>
-
-            <div class="architecture">
-              <div class="architecture__label">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="12"
-                  height="12"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <rect x="2" y="3" width="20" height="14" rx="2" />
-                  <line x1="8" y1="21" x2="16" y2="21" />
-                  <line x1="12" y1="17" x2="12" y2="21" />
-                </svg>
-                SYSTEM ARCHITECTURE
-              </div>
-            </div>
-
-            <div class="project-card__details">
-              <section>
-                <h4 class="project-card__section-title">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="12"
-                    height="12"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <polyline points="9 11 12 14 22 4" />
-                    <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" />
-                  </svg>
-                  RESPONSIBILITIES
-                </h4>
-                <ul class="project-card__resp">
-                  <li>AI Validation</li>
-                  <li>Building Express Server</li>
-                  <li>Designing MongoDB Atlas Database</li>
-                  <li>API Development</li>
-                  <li>Setting up Render Deployment Environment</li>
-                  <li>Figma-based UI/UX Design</li>
-                </ul>
-              </section>
-              <section>
-                <h4 class="project-card__section-title">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="12"
-                    height="12"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <line x1="8" y1="6" x2="21" y2="6" />
-                    <line x1="8" y1="12" x2="21" y2="12" />
-                    <line x1="8" y1="18" x2="21" y2="18" />
-                    <line x1="3" y1="6" x2="3.01" y2="6" />
-                    <line x1="3" y1="12" x2="3.01" y2="12" />
-                    <line x1="3" y1="18" x2="3.01" y2="18" />
-                  </svg>
-                  TO-DO
-                </h4>
-                <ul class="project-card__todo">
-                  <li>
-                    <span class="priority priority--1">P1</span> Refactor main page and improve web
-                    accessibility
-                  </li>
-                  <li>
-                    <span class="priority priority--2">P2</span> Implement CI/CD automated
-                    deployment
-                  </li>
-                </ul>
-              </section>
-            </div>
-
-            <section>
-              <h4 class="project-card__section-title">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="12"
-                  height="12"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <circle cx="12" cy="12" r="10" />
-                  <line x1="12" y1="8" x2="12" y2="12" />
-                  <line x1="12" y1="16" x2="12.01" y2="16" />
-                </svg>
-                TROUBLESHOOTING
-              </h4>
-              <ul class="project-card__trouble">
-                <li>
-                  <span class="project-card__issue-num">#01</span> Organization
-                  <span class="project-card__issue-arrow">→</span>
-                  <span class="project-card__issue-solution">Solution</span>
-                </li>
-                <li>
-                  <span class="project-card__issue-num">#02</span> Spin down
-                  <span class="project-card__issue-arrow">→</span>
-                  <span class="project-card__issue-solution">Solution</span>
-                </li>
-              </ul>
-            </section>
-          </article>
-          <article class="project-card">
-            <header class="project-card__header">
-              <h3 class="project-card__title">
-                Economic Quiz App
-                <span style="font-weight: 400; color: var(--text-secondary)">(Example)</span>
-              </h3>
-              <p class="project-card__date"><time datetime="2026-05">May 2026</time> – Ongoing</p>
-            </header>
-
-            <p class="project-card__desc">
-              A web-based economic learning service designed for beginners to learn economic terms
-              through quizzes.
-            </p>
-
-            <nav class="project-card__links">
-              <a href="#">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <circle cx="12" cy="12" r="10" />
-                  <line x1="2" y1="12" x2="22" y2="12" />
-                  <path
-                    d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
-                  />
-                </svg>
-                Web Page
-              </a>
-              <a href="#">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  class="project__icon"
+                  viewBox="0 0 1024 1024"
                 >
                   <path
-                    d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"
+                    fill="currentColor"
+                    d="M511.984 0c-198.032 0-353.12 161.104-353.12 359.136c0 149.2 73.28 220.256 131.185 272.128c37.28 33.424 62.368 53.552 62.368 78.352v54.255c0 1.392.193 2.752.368 4.128h-.72v92.624c.016 97.712 63.2 163.376 161.072 163.376c94.464 0 158.944-65.664 158.944-163.376V768h-.928c.176-1.376.416-2.736.416-4.128v-54.255c0-37.76 28.032-60.592 70.528-97.696c57.504-50.208 123.023-112.688 123.023-252.784C865.136 161.104 710.016 0 511.983 0zm-1.215 960c-59.904 0-94.689-37.152-94.689-99.376l-.463-42.672C438.64 825.824 470 832 512 832c41.424 0 72.848-6.624 96.08-14.768v43.392c0 63.152-35.247 99.376-97.312 99.376zm189.248-396.288c-43.472 37.968-92.433 77.216-92.433 145.904v40.432c-15.183 8.48-43.183 18.56-96.127 18.56c-55.569 0-81.92-9.856-95.024-17.473V709.6c0-54.608-42.688-89.297-83.68-126.017c-54.32-48.672-109.873-103.84-109.873-224.464c-.015-162.72 126.385-295.12 289.104-295.12c162.752 0 289.152 132.4 289.152 295.137c0 111.024-48.463 158.576-101.12 204.576z"
                   />
                 </svg>
-                Repository
-              </a>
-              <a href="#">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
-                  <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
-                </svg>
-                TIL
-              </a>
-              <a href="#">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <polyline points="1 4 1 10 7 10" />
-                  <path d="M3.51 15a9 9 0 1 0 .49-3.67" />
-                </svg>
-                Retrospective
+                회고록
               </a>
             </nav>
-
-            <div class="architecture">
-              <div class="architecture__label">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="12"
-                  height="12"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <rect x="2" y="3" width="20" height="14" rx="2" />
-                  <line x1="8" y1="21" x2="16" y2="21" />
-                  <line x1="12" y1="17" x2="12" y2="21" />
-                </svg>
-                SYSTEM ARCHITECTURE
-              </div>
+            <div class="project__architecture">
+              <div class="project__architecture__label">SYSTEM ARCHITECTURE</div>
             </div>
-
-            <div class="project-card__details">
-              <section>
-                <h4 class="project-card__section-title">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="12"
-                    height="12"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <polyline points="9 11 12 14 22 4" />
-                    <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" />
-                  </svg>
-                  RESPONSIBILITIES
-                </h4>
-                <ul class="project-card__resp">
-                  <li>AI Validation</li>
-                  <li>Building Express Server</li>
-                  <li>Designing MongoDB Atlas Database</li>
-                  <li>API Development</li>
-                  <li>Setting up Render Deployment Environment</li>
-                  <li>Figma-based UI/UX Design</li>
+            <div class="project__details">
+              <section class="project__responsibilities-section">
+                <h4 class="project__section-title">RESPONSIBILITIES</h4>
+                <ul class="project__responsibilities-list">
+                  <li class="project__responsibilities-item">Express 서버 구축</li>
+                  <li class="project__responsibilities-item">REST API 개발</li>
+                  <li class="project__responsibilities-item">MongoDB Atlas 데이터 설계</li>
+                  <li class="project__responsibilities-item">Render 배포</li>
+                  <li class="project__responsibilities-item">Figma 기반 UI/UX 설계</li>
                 </ul>
               </section>
-              <section>
-                <h4 class="project-card__section-title">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="12"
-                    height="12"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <line x1="8" y1="6" x2="21" y2="6" />
-                    <line x1="8" y1="12" x2="21" y2="12" />
-                    <line x1="8" y1="18" x2="21" y2="18" />
-                    <line x1="3" y1="6" x2="3.01" y2="6" />
-                    <line x1="3" y1="12" x2="3.01" y2="12" />
-                    <line x1="3" y1="18" x2="3.01" y2="18" />
-                  </svg>
-                  TO-DO
-                </h4>
-                <ul class="project-card__todo">
-                  <li><span class="priority priority--1">P1</span> Priority 1 Task</li>
-                  <li><span class="priority priority--2">P2</span> Priority 2 Task</li>
-                  <li><span class="priority priority--3">P3</span> Priority 3 Task</li>
+              <section class="project__todo-section">
+                <h4 class="project__section-title">ISSUES</h4>
+                <ul class="project__todo-list">
+                  <li class="project__todo-item">
+                    <!-- Refactor main page and improve web accessibility -->
+                  </li>
+                  <!-- <li class="project__todo-item">Implement CI/CD automated deployment</li> -->
                 </ul>
               </section>
+              <section class="project__troubleshooting-section">
+                <h4 class="project__section-title">TROUBLESHOOTING</h4>
+                <article class="project__troubleshooting-item">
+                  <h5 class="project__troubleshooting-title">#01 Organization 문제</h5>
+                  <p class="project__troubleshooting-desc">이것은 본문</p>
+                </article>
+              </section>
             </div>
-
-            <section>
-              <h4 class="project-card__section-title">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="12"
-                  height="12"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <circle cx="12" cy="12" r="10" />
-                  <line x1="12" y1="8" x2="12" y2="12" />
-                  <line x1="12" y1="16" x2="12.01" y2="16" />
-                </svg>
-                TROUBLESHOOTING
-              </h4>
-              <ul class="project-card__trouble">
-                <li>
-                  <span class="project-card__issue-num">#01</span> Issue 1
-                  <span class="project-card__issue-arrow">→</span>
-                  <span class="project-card__issue-solution">Solution 1</span>
-                </li>
-                <li>
-                  <span class="project-card__issue-num">#02</span> Issue 2
-                  <span class="project-card__issue-arrow">→</span>
-                  <span class="project-card__issue-solution">Solution 2</span>
-                </li>
-                <li>
-                  <span class="project-card__issue-num">#03</span> Issue 3
-                  <span class="project-card__issue-arrow">→</span>
-                  <span class="project-card__issue-solution">Solution 3</span>
-                </li>
-              </ul>
-            </section>
           </article>
         </div>
       </main>

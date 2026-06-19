@@ -15,6 +15,7 @@
   --chip-bg: rgba(0, 0, 0, 0.06);
   --arch-bg: rgba(0, 0, 0, 0.02);
   --sidebar-w: 288px;
+  --flex-gap: 6px;
 }
 
 body {
@@ -31,6 +32,17 @@ address a {
   font-family: 'Noto Sans KR', 'Nanum Gothic', sans-serif;
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 .layout {
   display: flex;
   min-height: 100vh;
@@ -44,91 +56,99 @@ address a {
   padding: 24px;
 }
 
+.profile__title,
+.contact__title,
+.education__title,
+.tech-stack__title {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+.profile__text {
+  display: flex;
+  gap: var(--flex-gap);
+  align-items: baseline;
+}
+
 .profile__name {
   font-size: 26px;
   font-weight: 700;
-  letter-spacing: -2px;
   color: var(--text);
 }
 
 .profile__role {
-  display: block;
   font-size: 10px;
   font-weight: 500;
   color: var(--text-muted);
 }
 
-.profile__divider {
-  height: 1px;
-  background-color: var(--border-mid);
-  margin: 18px 0 20px;
+.profile__image-container {
+  height: 200px;
+  overflow: hidden;
+  border-radius: 3px;
 }
 
-.profile__contact {
+.profile__image {
+  width: 100%;
+  object-fit: cover;
+  object-position: center -80px;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid var(--border-mid);
+  margin: 16px 0;
+}
+
+.contact,
+.profile,
+.education,
+.tech-stack {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: var(--flex-gap);
 }
 
-.profile__contact-link {
+.contact__link {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: var(--flex-gap);
   color: var(--text-secondary);
   font-size: 14px;
 }
 
-.profile__contact-link:hover {
+.contact__link:hover {
   color: var(--text);
 }
 
-.profile__contact-link svg {
+.contact__link svg {
   color: var(--text-muted);
 }
 
-.profile__education {
-  margin-top: 8px;
+.education__list {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: var(--flex-gap);
 }
 
-.profile__education-pair {
+.education__item {
   display: flex;
-  gap: 8px;
+  gap: var(--flex-gap);
   color: var(--text-secondary);
   font-size: 14px;
 }
 
-.profile__education-term {
+.education__term {
   display: flex;
   align-items: center;
-}
-
-.profile__education-term svg {
-  color: var(--text-muted);
-}
-
-.profile__education dd em {
-  display: block;
-  font-style: normal;
-  color: var(--text-muted);
-  font-size: 11px;
-}
-
-.tech-stack__title {
-  margin-bottom: 18px;
-  font-size: 16px;
-  font-weight: 500;
-  color: var(--text-muted);
-  text-transform: uppercase;
 }
 
 .tech-stack__list {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  gap: 8px;
+  gap: var(--flex-gap);
 }
 
 .tech-stack__term {
@@ -137,7 +157,7 @@ address a {
   color: var(--text-muted);
 }
 
-.badge {
+.tech-stack__badge {
   display: inline-block;
   padding: 2px 7px;
   background: var(--chip-bg);
@@ -147,7 +167,60 @@ address a {
   font-weight: 400;
 }
 
+.tech-stack__badge--HTML {
+  background: #e34f26;
+  color: #fff;
+}
+.tech-stack__badge--CSS {
+  background: #1572b6;
+  color: #fff;
+}
+.tech-stack__badge--JavaScript {
+  background: #f7df1e;
+  color: #000;
+}
+.tech-stack__badge--React {
+  background: #61dafb;
+  color: #000;
+}
+.tech-stack__badge--Node\.js {
+  background: #339933;
+  color: #fff;
+}
+.tech-stack__badge--Express {
+  background: #1a5c1a;
+  color: #fff;
+}
+.tech-stack__badge--MongoDB-Atlas {
+  background: #001e2b;
+  color: #fff;
+}
+.tech-stack__badge--Render {
+  background: #2d2d2d;
+  color: #fff;
+}
+.tech-stack__badge--GitHub {
+  background: #8957e5;
+  color: #fff;
+}
+.tech-stack__badge--GitHub-Discussions {
+  background: #8957e5;
+  color: #fff;
+}
+.tech-stack__badge--GitHub-Issues {
+  background: #8957e5;
+  color: #fff;
+}
+.tech-stack__badge--Notion {
+  background: #000;
+  color: #fff;
+}
+
 .main {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: var(--flex-gap);
   min-height: 100vh;
   padding: 24px;
 }
@@ -158,12 +231,12 @@ address a {
   color: var(--text-muted);
 }
 
-.projects {
+.project-container {
   display: flex;
   gap: 16px;
 }
 
-.project-card {
+.project {
   flex: 1;
   border: 1px solid var(--border);
   border-radius: 3px;
@@ -173,34 +246,34 @@ address a {
   gap: 16px;
 }
 
-.project-card__header {
+.project__header {
   display: flex;
   align-items: baseline;
   gap: 10px;
 }
 
-.project-card__title {
+.project__title {
   font-size: 16px;
   font-weight: 600;
   color: var(--text);
 }
 
-.project-card__date {
+.project__date {
   font-size: 11px;
   color: var(--text-muted);
 }
 
-.project-card__desc {
+.project__desc {
   font-size: 14px;
   color: var(--text);
 }
 
-.project-card__links {
+.project__nav {
   display: flex;
   gap: 14px;
 }
 
-.project-card__links a {
+.project__link {
   display: flex;
   align-items: center;
   gap: 4px;
@@ -208,25 +281,22 @@ address a {
   color: var(--text-secondary);
 }
 
-.project-card__links a:hover {
+.project__link:hover {
   color: var(--text);
 }
 
-.project-card__links a svg {
+.project__icon {
   width: 12px;
   height: 12px;
 }
 
-.project-card__details {
+.project__details {
   display: flex;
+  flex-wrap: wrap;
   gap: 16px;
 }
 
-.project-card__details > * {
-  flex: 1;
-}
-
-.project-card__section-title {
+.project__section-title {
   display: flex;
   align-items: center;
   gap: 5px;
@@ -236,36 +306,42 @@ address a {
   margin-bottom: 8px;
 }
 
-.project-card__resp,
-.project-card__todo,
-.project-card__trouble {
+.project__responsibilities-section,
+.project__todo-section {
+  flex: 1;
+  /* width: 50%; */
+  /* box-sizing: border-box; */
+}
+
+.project__responsibilities-list,
+.project__todo-list,
+.project__troubleshooting-list {
   list-style: none;
 }
 
-.project-card__resp li {
+.project__responsibilities-item,
+.project__todo-item {
   font-size: 14px;
   padding-left: 12px;
   position: relative;
   color: var(--text);
 }
 
-.project-card__resp li::before {
+.project__responsibilities-item::before {
   content: '–';
   position: absolute;
   left: 0;
   color: var(--text-muted);
 }
 
-.project-card__todo li {
-  display: flex;
-  gap: 6px;
-  font-size: 12px;
-  color: var(--text);
+.project__troubleshooting-section {
+  width: 100%;
 }
 
-.project-card__trouble li {
+.project__troubleshooting-item {
   font-size: 12px;
   display: flex;
+  flex-direction: column;
   align-items: baseline;
   gap: 6px;
   padding-left: 8px;
@@ -273,54 +349,24 @@ address a {
   color: var(--text);
 }
 
-.project-card__issue-num {
-  font-size: 10px;
+.project__troubleshooting-title {
   font-weight: 500;
-  color: var(--text-muted);
-  flex-shrink: 0;
-  font-variant-numeric: tabular-nums;
+  font-size: 16px;
 }
 
-.project-card__issue-arrow {
-  color: var(--text-muted);
-  flex-shrink: 0;
-}
-
-.project-card__issue-solution {
+.project__troubleshooting-desc {
+  font-size: 12px;
   color: var(--text-muted);
 }
 
-.priority {
-  display: inline-block;
-  font-size: 10px;
-  font-weight: 600;
-  padding: 1px 4px;
-  border-radius: 3px;
-}
-
-.priority--1 {
-  background: rgba(235, 87, 87, 0.1);
-  color: #c0392b;
-}
-
-.priority--2 {
-  background: rgba(242, 153, 74, 0.1);
-  color: #b07d2e;
-}
-
-.priority--3 {
-  background: rgba(39, 174, 96, 0.1);
-  color: #1e7e4a;
-}
-
-.architecture {
+.project__architecture {
   background: var(--arch-bg);
   border: 1px solid var(--border);
   border-radius: 3px;
   padding: 14px 16px 16px;
 }
 
-.architecture__label {
+.project__architecture__label {
   display: flex;
   align-items: center;
   gap: 5px;
