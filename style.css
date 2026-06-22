@@ -375,6 +375,117 @@ address a {
   color: var(--text-muted);
 }
 
+/* ── ARCHITECTURE DIAGRAM ── */
+.arch-diagram {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 12px;
+  overflow-x: auto;
+}
+
+.arch-node {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.arch-node__layer {
+  font-size: 10px;
+  font-weight: 500;
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+}
+
+.arch-node__box {
+  border: 1px solid var(--border-mid);
+  border-radius: 3px;
+  padding: 8px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background: var(--bg);
+  min-width: 90px;
+}
+
+.arch-node__name {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.arch-node__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px;
+}
+
+.arch-tag {
+  display: inline-block;
+  padding: 1px 5px;
+  border-radius: 2px;
+  font-size: 10px;
+  font-weight: 400;
+  background: var(--chip-bg);
+  color: var(--text-secondary);
+}
+
+.arch-tag--JavaScript {
+  background: #f7df1e;
+  color: #000;
+}
+
+.arch-tag--React {
+  background: #61dafb;
+  color: #000;
+}
+
+.arch-tag--Node\.js {
+  background: #339933;
+  color: #fff;
+}
+
+.arch-tag--Express {
+  background: #1a5c1a;
+  color: #fff;
+}
+
+.arch-connector {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  flex: 1;
+  min-width: 52px;
+}
+
+.arch-connector__label {
+  font-size: 10px;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.arch-connector__line {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.arch-connector__track {
+  flex: 1;
+  height: 1px;
+  background: var(--border-mid);
+}
+
+.arch-connector__head {
+  width: 0;
+  height: 0;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  border-left: 6px solid var(--border-mid);
+}
+
 /* ── MOBILE RESPONSIVE ── */
 @media (orientation: portrait) {
   .layout {
