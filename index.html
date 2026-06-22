@@ -177,46 +177,69 @@
             <div class="project__architecture">
               <div class="project__architecture__label">SYSTEM ARCHITECTURE</div>
               <div class="arch-diagram">
-                <div class="arch-node">
-                  <span class="arch-node__layer">CLIENT</span>
+
+                <div class="arch-node arch-gs">
                   <div class="arch-node__box">
-                    <span class="arch-node__name">Browser</span>
-                    <div class="arch-node__tags">
-                      <span class="arch-tag arch-tag--JavaScript">JavaScript</span>
-                      <span class="arch-tag arch-tag--React">React</span>
-                    </div>
+                    <strong class="arch-node__title arch-node__title--sheets">Google Sheets API</strong>
+                    <span class="arch-node__sub">제품 가격 정보</span>
                   </div>
                 </div>
-                <div class="arch-connector">
-                  <span class="arch-connector__label">HTTP / REST</span>
-                  <div class="arch-connector__line">
-                    <div class="arch-connector__track"></div>
-                    <div class="arch-connector__head"></div>
+
+                <div class="arch-h-conn arch-conn-left">
+                  <div class="arch-h-conn__row">
+                    <div class="arch-head arch-head--left"></div>
+                    <div class="arch-h-conn__track"></div>
                   </div>
+                  <span class="arch-h-conn__label">제품 가격 정보 시트</span>
                 </div>
-                <div class="arch-node">
-                  <span class="arch-node__layer">SERVER</span>
+
+                <div class="arch-node arch-app">
                   <div class="arch-node__box">
-                    <span class="arch-node__name">Render</span>
-                    <div class="arch-node__tags">
-                      <span class="arch-tag arch-tag--Node.js">Node.js</span>
-                      <span class="arch-tag arch-tag--Express">Express</span>
-                    </div>
+                    <strong class="arch-node__title arch-node__title--app">app.js</strong>
+                    <span class="arch-node__sub">가격 비교, 최저가 계산</span>
                   </div>
                 </div>
-                <div class="arch-connector">
-                  <span class="arch-connector__label">Mongoose</span>
-                  <div class="arch-connector__line">
-                    <div class="arch-connector__track"></div>
-                    <div class="arch-connector__head"></div>
+
+                <div class="arch-h-conn arch-conn-right">
+                  <span class="arch-h-conn__label">판매중 제품 정보</span>
+                  <div class="arch-h-conn__row">
+                    <div class="arch-head arch-head--left"></div>
+                    <div class="arch-h-conn__track"></div>
                   </div>
+                  <div class="arch-h-conn__row">
+                    <div class="arch-h-conn__track"></div>
+                    <div class="arch-head arch-head--right"></div>
+                  </div>
+                  <span class="arch-h-conn__label">가격 수정 요청</span>
                 </div>
-                <div class="arch-node">
-                  <span class="arch-node__layer">DATABASE</span>
+
+                <div class="arch-node arch-naver">
                   <div class="arch-node__box">
-                    <span class="arch-node__name">MongoDB Atlas</span>
+                    <strong class="arch-node__title arch-node__title--naver">네이버 커머스 API</strong>
+                    <span class="arch-node__sub">상품 조회, 가격 수정</span>
                   </div>
                 </div>
+
+                <div class="arch-v-conn">
+                  <div class="arch-v-conn__col">
+                    <span class="arch-v-conn__label">판매처별 가격</span>
+                    <div class="arch-head arch-head--up"></div>
+                    <div class="arch-v-conn__track"></div>
+                  </div>
+                  <div class="arch-v-conn__col">
+                    <span class="arch-v-conn__label">제품 카탈로그 페이지 URL</span>
+                    <div class="arch-v-conn__track"></div>
+                    <div class="arch-head arch-head--down"></div>
+                  </div>
+                </div>
+
+                <div class="arch-node arch-puppet">
+                  <div class="arch-node__box">
+                    <strong class="arch-node__title arch-node__title--app">Puppeteer</strong>
+                    <span class="arch-node__sub">판매처 가격 정보 수집</span>
+                  </div>
+                </div>
+
               </div>
             </div>
             <div class="project__details">
