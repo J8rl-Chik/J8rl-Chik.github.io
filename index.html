@@ -15,6 +15,7 @@
   <body>
     <div class="layout">
       <aside class="sidebar">
+        <h1>한 줄 소개</h1>
         <section class="profile">
           <h2 class="profile__title">Profile</h2>
           <div class="profile__image-container">
@@ -116,14 +117,14 @@
       <main class="main">
         <h2 class="main__title">PROJECTS</h2>
         <div class="project-container">
-          <!-- <article class="project">
+          <article class="project">
             <header class="project__header">
-              <h3 class="project__title">Economic Quiz App</h3>
-              <p class="project__date"><time datetime="2026-05">May 2026</time> – Ongoing</p>
+              <h3 class="project__title">경제 퀴즈 앱(가칭)</h3>
+              <p class="project__date"><time datetime="2026-05-9">2026.5.9</time> – Ongoing</p>
             </header>
             <p class="project__desc">
-              A web-based economic learning service designed for beginners to repeatedly learn
-              economic terms through quizzes.
+              경제 용어에 익숙하지 않은 입문자가 퀴즈를 통해 반복 학습할 수 있도록 만든 웹 기반 경제
+              학습 서비스
             </p>
             <nav class="project__nav">
               <a href="#" class="project__link">
@@ -177,83 +178,103 @@
             <div class="architecture-container">
               <div class="architecture">
                 <div class="architecture__label">SYSTEM ARCHITECTURE</div>
-                <div class="architecture__diagram">
-                  <div class="architecture__node architecture__node--gs">
-                    <strong class="architecture__node-title architecture__node-title--sheets"
-                      >Google Sheets API</strong
+                <div class="architecture__diagram architecture__diagram--quiz">
+                  <div class="architecture__node architecture__node--client">
+                    <strong class="architecture__node-title architecture__node-title--client"
+                      >CLIENT</strong
                     >
-                    <span class="architecture__node-desc">제품 가격 정보</span>
+                    <span class="architecture__node-desc">Browser</span>
                   </div>
 
                   <div
-                    class="architecture__node-connection architecture__node-connection--sheets-app"
-                  >
-                    <div
-                      class="architecture__connection-arrow architecture__connection-arrow--left"
-                    ></div>
-                    <span class="architecture__connection-desc">제품 가격 정보 시트</span>
-                  </div>
-
-                  <div class="architecture__node architecture__node--app">
-                    <strong class="architecture__node-title architecture__node-title--app"
-                      >app.js</strong
-                    >
-                    <span class="architecture__node-desc">가격 비교, 최저가 계산</span>
-                  </div>
-                  <div
-                    class="architecture__node-connection architecture__node-connection--app-naver"
+                    class="architecture__node-connection architecture__node-connection--client-cors"
                   >
                     <div class="architecture__node-connection">
-                      <span class="architecture__connection-desc">판매중 제품 정보</span>
-                      <div
-                        class="architecture__connection-arrow architecture__connection-arrow--left"
-                      ></div>
-                    </div>
-                    <div class="architecture__node-connection">
+                      <span class="architecture__connection-desc">HTTP GET</span>
                       <div
                         class="architecture__connection-arrow architecture__connection-arrow--right"
                       ></div>
-                      <span class="architecture__connection-desc">가격 수정 요청</span>
+                    </div>
+                    <div class="architecture__node-connection">
+                      <div
+                        class="architecture__connection-arrow architecture__connection-arrow--left"
+                      ></div>
+                      <span class="architecture__connection-desc">JSON Response</span>
                     </div>
                   </div>
 
-                  <div class="architecture__node architecture__node--naver">
-                    <strong class="architecture__node-title architecture__node-title--naver"
-                      >네이버 커머스 API</strong
+                  <div class="architecture__server-group">
+                    <span class="architecture__server-group-label"
+                      >SERVER (Render · Express.js)</span
                     >
-                    <span class="architecture__node-desc">상품 조회, 가격 수정</span>
+                    <div class="architecture__server-group-inner">
+                      <div class="architecture__node">
+                        <strong class="architecture__node-title architecture__node-title--server"
+                          >CORS</strong
+                        >
+                        <span class="architecture__node-desc">Middleware</span>
+                      </div>
+                      <div class="architecture__connection--server-inner">
+                        <div
+                          class="architecture__connection-arrow architecture__connection-arrow--right"
+                        ></div>
+                      </div>
+                      <div class="architecture__node">
+                        <strong class="architecture__node-title architecture__node-title--server"
+                          >Router</strong
+                        >
+                        <span class="architecture__node-desc">경로 매칭</span>
+                      </div>
+                      <div class="architecture__connection--server-inner">
+                        <div
+                          class="architecture__connection-arrow architecture__connection-arrow--right"
+                        ></div>
+                      </div>
+                      <div class="architecture__node">
+                        <strong class="architecture__node-title architecture__node-title--server"
+                          >Controller</strong
+                        >
+                        <span class="architecture__node-desc">유효성 검사</span>
+                      </div>
+                      <div class="architecture__connection--server-inner">
+                        <div
+                          class="architecture__connection-arrow architecture__connection-arrow--right"
+                        ></div>
+                      </div>
+                      <div class="architecture__node">
+                        <strong class="architecture__node-title architecture__node-title--server"
+                          >Service</strong
+                        >
+                        <span class="architecture__node-desc">비즈니스 로직</span>
+                      </div>
+                    </div>
                   </div>
 
                   <div
-                    class="architecture__node-connection architecture__node-connection--app-puppeteer"
+                    class="architecture__node-connection architecture__node-connection--service-db"
                   >
-                    <span
-                      class="architecture__connection-desc architecture__connection-desc--vertical architecture__connection-desc--left"
-                      >판매처별 가격</span
-                    >
-                    <div class="arrow-container">
+                    <div class="architecture__node-connection">
+                      <span class="architecture__connection-desc">조회</span>
                       <div
-                        class="architecture__connection-arrow architecture__connection-arrow--up"
-                      ></div>
-
-                      <div
-                        class="architecture__connection-arrow architecture__connection-arrow--down"
+                        class="architecture__connection-arrow architecture__connection-arrow--right"
                       ></div>
                     </div>
-                    <span
-                      class="architecture__connection-desc architecture__connection-desc--vertical"
-                      >제품 카탈로그 페이지 URL</span
-                    >
+                    <div class="architecture__node-connection">
+                      <div
+                        class="architecture__connection-arrow architecture__connection-arrow--left"
+                      ></div>
+                      <span class="architecture__connection-desc">퀴즈 데이터</span>
+                    </div>
                   </div>
-                  <div class="architecture__node architecture__node--puppeteer">
-                    <strong class="architecture__node-title architecture__node-title--app"
-                      >Puppeteer</strong
+
+                  <div class="architecture__node architecture__node--db">
+                    <strong class="architecture__node-title architecture__node-title--db"
+                      >MongoDB Atlas</strong
                     >
-                    <span class="architecture__node-desc">판매처 가격 정보 수집</span>
+                    <span class="architecture__node-desc">데이터 저장</span>
                   </div>
                 </div>
               </div>
-              
             </div>
             <div class="project__details">
               <section class="project__responsibilities-section">
@@ -283,15 +304,15 @@
                 </article>
               </section>
             </div>
-          </article> -->
+          </article>
           <article class="project">
             <header class="project__header">
-              <h3 class="project__title">Economic Quiz App</h3>
-              <p class="project__date"><time datetime="2026-05">May 2026</time> – Ongoing</p>
+              <h3 class="project__title">경제 퀴즈 앱(가칭)</h3>
+              <p class="project__date"><time datetime="2026-06-13">2026.6.13</time> – Ongoing</p>
             </header>
             <p class="project__desc">
-              A web-based economic learning service designed for beginners to repeatedly learn
-              economic terms through quizzes.
+              경제 용어에 익숙하지 않은 입문자가 퀴즈를 통해 반복 학습할 수 있도록 만든 웹 기반 경제
+              학습 서비스
             </p>
             <nav class="project__nav">
               <a href="#" class="project__link">
@@ -434,12 +455,10 @@
                 </ul>
               </section>
               <section class="project__todo-section">
-                <h4 class="project__section-title">ISSUES</h4>
+                <h4 class="project__section-title">To Do</h4>
                 <ul class="project__todo-list">
-                  <li class="project__todo-item">
-                    Refactor main page and improve web accessibility
-                  </li>
-                  <li class="project__todo-item">Implement CI/CD automated deployment</li>
+                  <li class="project__todo-item">리팩토링</li>
+                  <li class="project__todo-item">Spindown 문제 해결</li>
                 </ul>
               </section>
               <section class="project__troubleshooting-section">
