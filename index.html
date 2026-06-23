@@ -67,7 +67,7 @@
                 </svg>
                 <span class="sr-only">학력</span>
               </dt>
-              <dd>울산과학대학교 컴퓨터정보학부 졸업</dd>
+              <dd>울산과학대학교 컴퓨터정보학부</dd>
             </div>
             <div class="education__item">
               <dt class="education__term">
@@ -116,6 +116,174 @@
       <main class="main">
         <h2 class="main__title">PROJECTS</h2>
         <div class="project-container">
+          <!-- <article class="project">
+            <header class="project__header">
+              <h3 class="project__title">Economic Quiz App</h3>
+              <p class="project__date"><time datetime="2026-05">May 2026</time> – Ongoing</p>
+            </header>
+            <p class="project__desc">
+              A web-based economic learning service designed for beginners to repeatedly learn
+              economic terms through quizzes.
+            </p>
+            <nav class="project__nav">
+              <a href="#" class="project__link">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" class="project__icon">
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <circle cx="7" cy="7" r="6.5" />
+                    <path
+                      d="M.5 7h13m-4 0A11.22 11.22 0 0 1 7 13.5A11.22 11.22 0 0 1 4.5 7A11.22 11.22 0 0 1 7 .5A11.22 11.22 0 0 1 9.5 7Z"
+                    />
+                  </g>
+                </svg>
+                Web
+              </a>
+              <a href="#" class="project__link">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="project__icon">
+                  <path
+                    fill="currentColor"
+                    d="M9.566 5.838a1.357 1.357 0 0 1-1.347-1.135L7.984 3.22a.452.452 0 0 0-.45-.378H1.818a.45.45 0 0 0-.454.447v13.422a.45.45 0 0 0 .454.447h16.364c.25 0 .454-.2.454-.447V6.285a.451.451 0 0 0-.454-.447H9.566Zm0-1.342h8.616c1.004 0 1.818.8 1.818 1.79V16.71c0 .988-.814 1.789-1.818 1.789H1.818C.814 18.5 0 17.699 0 16.71V3.29C0 2.3.814 1.5 1.818 1.5h5.716a1.81 1.81 0 0 1 1.797 1.514l.235 1.482Z"
+                  />
+                </svg>
+                Repository
+              </a>
+              <a href="#" class="project__link">
+                <svg xmlns="http://www.w3.org/2000/svg" class="project__icon" viewBox="0 0 432 512">
+                  <path
+                    fill="currentColor"
+                    d="M67 512h362v-43H67q-22 0-22-21t22-21h362V0H67Q39 0 21 18.5T3 64v363h4q-4 12-4 21q0 27 18 45.5T67 512zM45 64q0-21 22-21h320v341H67q-8 0-22 4V64zm86 107h192v42H131v-42zm0-86h192v43H131V85z"
+                  />
+                </svg>
+                TIL
+              </a>
+              <a href="#" class="project__link">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="project__icon"
+                  viewBox="0 0 1024 1024"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M511.984 0c-198.032 0-353.12 161.104-353.12 359.136c0 149.2 73.28 220.256 131.185 272.128c37.28 33.424 62.368 53.552 62.368 78.352v54.255c0 1.392.193 2.752.368 4.128h-.72v92.624c.016 97.712 63.2 163.376 161.072 163.376c94.464 0 158.944-65.664 158.944-163.376V768h-.928c.176-1.376.416-2.736.416-4.128v-54.255c0-37.76 28.032-60.592 70.528-97.696c57.504-50.208 123.023-112.688 123.023-252.784C865.136 161.104 710.016 0 511.983 0zm-1.215 960c-59.904 0-94.689-37.152-94.689-99.376l-.463-42.672C438.64 825.824 470 832 512 832c41.424 0 72.848-6.624 96.08-14.768v43.392c0 63.152-35.247 99.376-97.312 99.376zm189.248-396.288c-43.472 37.968-92.433 77.216-92.433 145.904v40.432c-15.183 8.48-43.183 18.56-96.127 18.56c-55.569 0-81.92-9.856-95.024-17.473V709.6c0-54.608-42.688-89.297-83.68-126.017c-54.32-48.672-109.873-103.84-109.873-224.464c-.015-162.72 126.385-295.12 289.104-295.12c162.752 0 289.152 132.4 289.152 295.137c0 111.024-48.463 158.576-101.12 204.576z"
+                  />
+                </svg>
+                회고록
+              </a>
+            </nav>
+            <div class="architecture-container">
+              <div class="architecture">
+                <div class="architecture__label">SYSTEM ARCHITECTURE</div>
+                <div class="architecture__diagram">
+                  <div class="architecture__node architecture__node--gs">
+                    <strong class="architecture__node-title architecture__node-title--sheets"
+                      >Google Sheets API</strong
+                    >
+                    <span class="architecture__node-desc">제품 가격 정보</span>
+                  </div>
+
+                  <div
+                    class="architecture__node-connection architecture__node-connection--sheets-app"
+                  >
+                    <div
+                      class="architecture__connection-arrow architecture__connection-arrow--left"
+                    ></div>
+                    <span class="architecture__connection-desc">제품 가격 정보 시트</span>
+                  </div>
+
+                  <div class="architecture__node architecture__node--app">
+                    <strong class="architecture__node-title architecture__node-title--app"
+                      >app.js</strong
+                    >
+                    <span class="architecture__node-desc">가격 비교, 최저가 계산</span>
+                  </div>
+                  <div
+                    class="architecture__node-connection architecture__node-connection--app-naver"
+                  >
+                    <div class="architecture__node-connection">
+                      <span class="architecture__connection-desc">판매중 제품 정보</span>
+                      <div
+                        class="architecture__connection-arrow architecture__connection-arrow--left"
+                      ></div>
+                    </div>
+                    <div class="architecture__node-connection">
+                      <div
+                        class="architecture__connection-arrow architecture__connection-arrow--right"
+                      ></div>
+                      <span class="architecture__connection-desc">가격 수정 요청</span>
+                    </div>
+                  </div>
+
+                  <div class="architecture__node architecture__node--naver">
+                    <strong class="architecture__node-title architecture__node-title--naver"
+                      >네이버 커머스 API</strong
+                    >
+                    <span class="architecture__node-desc">상품 조회, 가격 수정</span>
+                  </div>
+
+                  <div
+                    class="architecture__node-connection architecture__node-connection--app-puppeteer"
+                  >
+                    <span
+                      class="architecture__connection-desc architecture__connection-desc--vertical architecture__connection-desc--left"
+                      >판매처별 가격</span
+                    >
+                    <div class="arrow-container">
+                      <div
+                        class="architecture__connection-arrow architecture__connection-arrow--up"
+                      ></div>
+
+                      <div
+                        class="architecture__connection-arrow architecture__connection-arrow--down"
+                      ></div>
+                    </div>
+                    <span
+                      class="architecture__connection-desc architecture__connection-desc--vertical"
+                      >제품 카탈로그 페이지 URL</span
+                    >
+                  </div>
+                  <div class="architecture__node architecture__node--puppeteer">
+                    <strong class="architecture__node-title architecture__node-title--app"
+                      >Puppeteer</strong
+                    >
+                    <span class="architecture__node-desc">판매처 가격 정보 수집</span>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+            <div class="project__details">
+              <section class="project__responsibilities-section">
+                <h4 class="project__section-title">RESPONSIBILITIES</h4>
+                <ul class="project__responsibilities-list">
+                  <li class="project__responsibilities-item">Express 서버 구축</li>
+                  <li class="project__responsibilities-item">REST API 개발</li>
+                  <li class="project__responsibilities-item">MongoDB Atlas 데이터 설계</li>
+                  <li class="project__responsibilities-item">Render 배포</li>
+                  <li class="project__responsibilities-item">Figma 기반 UI/UX 설계</li>
+                </ul>
+              </section>
+              <section class="project__todo-section">
+                <h4 class="project__section-title">ISSUES</h4>
+                <ul class="project__todo-list">
+                  <li class="project__todo-item">
+                    Refactor main page and improve web accessibility
+                  </li>
+                  <li class="project__todo-item">Implement CI/CD automated deployment</li>
+                </ul>
+              </section>
+              <section class="project__troubleshooting-section">
+                <h4 class="project__section-title">TROUBLESHOOTING</h4>
+                <article class="project__troubleshooting-item">
+                  <h5 class="project__troubleshooting-title">#01 Organization 문제</h5>
+                  <p class="project__troubleshooting-desc">이것은 본문</p>
+                </article>
+              </section>
+            </div>
+          </article> -->
           <article class="project">
             <header class="project__header">
               <h3 class="project__title">Economic Quiz App</h3>
@@ -174,72 +342,84 @@
                 회고록
               </a>
             </nav>
-            <div class="project__architecture">
-              <div class="project__architecture__label">SYSTEM ARCHITECTURE</div>
-              <div class="arch-diagram">
+            <div class="architecture-container">
+              <div class="architecture">
+                <div class="architecture__label">SYSTEM ARCHITECTURE</div>
+                <div class="architecture__diagram">
+                  <div class="architecture__node architecture__node--gs">
+                    <strong class="architecture__node-title architecture__node-title--sheets"
+                      >Google Sheets API</strong
+                    >
+                    <span class="architecture__node-desc">제품 가격 정보</span>
+                  </div>
 
-                <div class="arch-node arch-gs">
-                  <div class="arch-node__box">
-                    <strong class="arch-node__title arch-node__title--sheets">Google Sheets API</strong>
-                    <span class="arch-node__sub">제품 가격 정보</span>
+                  <div
+                    class="architecture__node-connection architecture__node-connection--sheets-app"
+                  >
+                    <div
+                      class="architecture__connection-arrow architecture__connection-arrow--left"
+                    ></div>
+                    <span class="architecture__connection-desc">제품 가격 정보 시트</span>
+                  </div>
+
+                  <div class="architecture__node architecture__node--app">
+                    <strong class="architecture__node-title architecture__node-title--app"
+                      >app.js</strong
+                    >
+                    <span class="architecture__node-desc">가격 비교, 최저가 계산</span>
+                  </div>
+                  <div
+                    class="architecture__node-connection architecture__node-connection--app-naver"
+                  >
+                    <div class="architecture__node-connection">
+                      <span class="architecture__connection-desc">판매중 제품 정보</span>
+                      <div
+                        class="architecture__connection-arrow architecture__connection-arrow--left"
+                      ></div>
+                    </div>
+                    <div class="architecture__node-connection">
+                      <div
+                        class="architecture__connection-arrow architecture__connection-arrow--right"
+                      ></div>
+                      <span class="architecture__connection-desc">가격 수정 요청</span>
+                    </div>
+                  </div>
+
+                  <div class="architecture__node architecture__node--naver">
+                    <strong class="architecture__node-title architecture__node-title--naver"
+                      >네이버 커머스 API</strong
+                    >
+                    <span class="architecture__node-desc">상품 조회, 가격 수정</span>
+                  </div>
+
+                  <div
+                    class="architecture__node-connection architecture__node-connection--app-puppeteer"
+                  >
+                    <span
+                      class="architecture__connection-desc architecture__connection-desc--vertical architecture__connection-desc--left"
+                      >판매처별 가격</span
+                    >
+                    <div class="arrow-container">
+                      <div
+                        class="architecture__connection-arrow architecture__connection-arrow--up"
+                      ></div>
+
+                      <div
+                        class="architecture__connection-arrow architecture__connection-arrow--down"
+                      ></div>
+                    </div>
+                    <span
+                      class="architecture__connection-desc architecture__connection-desc--vertical"
+                      >제품 카탈로그 페이지 URL</span
+                    >
+                  </div>
+                  <div class="architecture__node architecture__node--puppeteer">
+                    <strong class="architecture__node-title architecture__node-title--app"
+                      >Puppeteer</strong
+                    >
+                    <span class="architecture__node-desc">판매처 가격 정보 수집</span>
                   </div>
                 </div>
-
-                <div class="arch-h-conn arch-conn-left">
-                  <div class="arch-h-conn__row">
-                    <div class="arch-head arch-head--left"></div>
-                    <div class="arch-h-conn__track"></div>
-                  </div>
-                  <span class="arch-h-conn__label">제품 가격 정보 시트</span>
-                </div>
-
-                <div class="arch-node arch-app">
-                  <div class="arch-node__box">
-                    <strong class="arch-node__title arch-node__title--app">app.js</strong>
-                    <span class="arch-node__sub">가격 비교, 최저가 계산</span>
-                  </div>
-                </div>
-
-                <div class="arch-h-conn arch-conn-right">
-                  <span class="arch-h-conn__label">판매중 제품 정보</span>
-                  <div class="arch-h-conn__row">
-                    <div class="arch-head arch-head--left"></div>
-                    <div class="arch-h-conn__track"></div>
-                  </div>
-                  <div class="arch-h-conn__row">
-                    <div class="arch-h-conn__track"></div>
-                    <div class="arch-head arch-head--right"></div>
-                  </div>
-                  <span class="arch-h-conn__label">가격 수정 요청</span>
-                </div>
-
-                <div class="arch-node arch-naver">
-                  <div class="arch-node__box">
-                    <strong class="arch-node__title arch-node__title--naver">네이버 커머스 API</strong>
-                    <span class="arch-node__sub">상품 조회, 가격 수정</span>
-                  </div>
-                </div>
-
-                <div class="arch-v-conn">
-                  <div class="arch-v-conn__col">
-                    <span class="arch-v-conn__label">판매처별 가격</span>
-                    <div class="arch-head arch-head--up"></div>
-                    <div class="arch-v-conn__track"></div>
-                  </div>
-                  <div class="arch-v-conn__col">
-                    <span class="arch-v-conn__label">제품 카탈로그 페이지 URL</span>
-                    <div class="arch-v-conn__track"></div>
-                    <div class="arch-head arch-head--down"></div>
-                  </div>
-                </div>
-
-                <div class="arch-node arch-puppet">
-                  <div class="arch-node__box">
-                    <strong class="arch-node__title arch-node__title--app">Puppeteer</strong>
-                    <span class="arch-node__sub">판매처 가격 정보 수집</span>
-                  </div>
-                </div>
-
               </div>
             </div>
             <div class="project__details">
@@ -257,9 +437,9 @@
                 <h4 class="project__section-title">ISSUES</h4>
                 <ul class="project__todo-list">
                   <li class="project__todo-item">
-                    <!-- Refactor main page and improve web accessibility -->
+                    Refactor main page and improve web accessibility
                   </li>
-                  <!-- <li class="project__todo-item">Implement CI/CD automated deployment</li> -->
+                  <li class="project__todo-item">Implement CI/CD automated deployment</li>
                 </ul>
               </section>
               <section class="project__troubleshooting-section">
