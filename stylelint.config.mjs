@@ -1,6 +1,6 @@
 /** @type {import("stylelint").Config} */
 export default {
-  extends: ['stylelint-config-recess-order', 'stylelint-config-standard'],
+  extends: ['stylelint-config-standard', 'stylelint-config-recess-order'],
   rules: {
     // BEM: block(-block)?(__element(-element)?)?(--modifier(-modifier)?)?
     // modifier는 대소문자·숫자·점·하이픈 허용 (HTML, Node.js, MongoDB-Atlas 등)
