@@ -78,15 +78,20 @@ address {
 }
 
 .profile__image-container {
+  position: relative;
   height: 200px;
   overflow: hidden;
   border-radius: 3px;
 }
 
 .profile__image {
+  position: absolute;
+  top: -40%;
   width: 100%;
-  object-fit: cover;
-  object-position: center -80px;
+
+  /* object-fit: cover; */
+
+  /* object-position: center -80px; */
 }
 
 .profile__text {
@@ -636,6 +641,7 @@ address {
 }
 
 /* ── MOBILE RESPONSIVE ── */
+
 @media screen and (width <= 1420px) {
   .layout {
     flex-direction: column;
