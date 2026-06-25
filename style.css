@@ -601,7 +601,7 @@ address {
 }
 
 .architecture__node--db {
-  flex: 0.4;
+  flex: 0.3;
 }
 
 .architecture__node-connection--client-cors,
