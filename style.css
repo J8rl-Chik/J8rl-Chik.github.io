@@ -43,7 +43,6 @@ address {
 /* ── LAYOUT ── */
 .layout {
   display: flex;
-  flex-wrap: wrap;
   min-height: 100vh;
 }
 
@@ -597,9 +596,12 @@ address {
   align-items: center;
 }
 
-.architecture__node--client,
-.architecture__node--db {
+.architecture__node--client {
   width: auto;
+}
+
+.architecture__node--db {
+  flex: 0.4;
 }
 
 .architecture__node-connection--client-cors,
