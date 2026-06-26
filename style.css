@@ -48,7 +48,8 @@ address {
 
 .title {
   margin-bottom: 6px;
-  font-size: 16px;
+  font-size: 20px;
+  white-space: nowrap;
 }
 
 /* ── SIDEBAR ── */
@@ -60,7 +61,6 @@ address {
 
 .sidebar {
   flex-shrink: 0;
-  width: var(--sidebar-w);
 }
 
 .divider {
@@ -653,7 +653,7 @@ address {
 
 /* ── MOBILE RESPONSIVE ── */
 
-@media screen and (width <= 1420px) {
+/* @media screen and (width <= 1420px) {
   .layout {
     flex-direction: column;
   }
@@ -671,4 +671,4 @@ address {
   .architecture__node-title {
     white-space: nowrap;
   }
-}
+} */
