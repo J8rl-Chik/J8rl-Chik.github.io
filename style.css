@@ -18,9 +18,11 @@
 }
 
 body {
+  display: flex;
+  justify-content: center;
   font-family: 'Noto Sans KR', 'Nanum Gothic', sans-serif;
   color: var(--text);
-  background: var(--bg);
+  background: var(--sidebar-bg);
 }
 
 address {
@@ -42,7 +44,14 @@ address {
 /* ── LAYOUT ── */
 .layout {
   display: flex;
-  min-height: 100vh;
+  width: max-content;
+
+  /* justify-content: center; */
+
+  /* min-height: 100vh; */
+  background: var(--bg);
+  border-right: 1px solid var(--border);
+  border-left: 1px solid var(--border);
 }
 
 .title {
@@ -57,7 +66,7 @@ address {
   top: 0;
   height: 100vh;
   padding: 24px;
-  background: var(--sidebar-bg);
+  background: var(--bg);
   border-right: 1px solid var(--border);
 }
 
@@ -251,7 +260,9 @@ address {
   flex: 1;
   flex-direction: column;
   gap: var(--flex-gap);
+  max-width: 1000px;
   padding: 24px;
+  background-color: var(--bg);
 }
 
 .main__title {
@@ -343,6 +354,7 @@ address {
 .project__screenshot-img {
   width: 100%;
   object-fit: cover;
+  border: solid 1px var(--border);
 }
 
 .project__screenshot-desc {
@@ -386,14 +398,14 @@ address {
 
 .project__list-section-item-title {
   width: 100%;
-  font-size: 16px;
+  font-size: 15px;
 }
 
 .project__list-section-item,
 .project__todo-item {
   flex: 1 1 calc(50% - 3px);
   padding-left: 12px;
-  font-size: 16px;
+  font-size: 15px;
   color: var(--text);
 }
 
@@ -691,6 +703,10 @@ address {
 @media screen and (width <= 1420px) {
   .layout {
     flex-direction: column;
+  }
+
+  .sidebar-container {
+    position: static;
   }
 
   .sidebar {
