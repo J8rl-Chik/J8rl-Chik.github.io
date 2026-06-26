@@ -259,7 +259,7 @@ address {
 }
 
 .main__title {
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 500;
   color: var(--text-muted);
 }
@@ -364,7 +364,7 @@ address {
 
 .project__details {
   display: flex;
-  flex-wrap: wrap;
+  flex-flow: column wrap;
   gap: 16px;
 }
 
@@ -377,29 +377,54 @@ address {
   color: var(--text-muted);
 }
 
-.project__responsibilities-section,
+.project__list-section,
 .project__todo-section {
   flex: 1;
 }
 
-.project__responsibilities-list,
+.project__list-section-list,
 .project__todo-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
   list-style: none;
 }
 
-.project__responsibilities-item,
+.project__list-section-list--sub {
+  gap: 0;
+}
+
+.project__list-section-item-title {
+  width: 100%;
+  font-size: 16px;
+}
+
+.project__list-section-item,
 .project__todo-item {
-  position: relative;
+  flex: 1 1 calc(50% - 3px);
+
+  /* flex-shrink: 0; */
+
+  /* width: 50%; */
+
+  /* position: relative; */
   padding-left: 12px;
-  font-size: 14px;
+  font-size: 16px;
   color: var(--text);
 }
 
-.project__responsibilities-item::before {
+.project__list-section-item--sub {
+  /* width: 100%; */
+  position: relative;
+  flex: 1 1 100%;
+}
+
+.project__list-section-item--sub::before {
   position: absolute;
-  left: 0;
-  color: var(--text-muted);
-  content: '–';
+  top: 50%;
+  left: 3px;
+  line-height: 0;
+  content: '•';
 }
 
 .project__troubleshooting-section {
@@ -499,7 +524,7 @@ address {
 
 .architecture__node-desc {
   font-size: 11px;
-  color: var(--text-secondary);
+  color: var(--text);
   word-break: keep-all;
 }
 
@@ -680,7 +705,7 @@ address {
 
 /* ── MOBILE RESPONSIVE ── */
 
-/* @media screen and (width <= 1420px) {
+@media screen and (width <= 1420px) {
   .layout {
     flex-direction: column;
   }
@@ -698,4 +723,4 @@ address {
   .architecture__node-title {
     white-space: nowrap;
   }
-} */
+}
