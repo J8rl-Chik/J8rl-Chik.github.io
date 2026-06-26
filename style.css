@@ -44,7 +44,9 @@ address {
 /* ── LAYOUT ── */
 .layout {
   display: flex;
-  width: max-content;
+
+  /* width: max-content; */
+  min-width: 0;
 
   /* justify-content: center; */
 
@@ -257,6 +259,7 @@ address {
   flex: 1;
   flex-direction: column;
   gap: var(--flex-gap);
+  min-width: 0;
   max-width: 1000px;
   padding: 24px;
   background-color: var(--bg);
