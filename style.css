@@ -701,7 +701,7 @@ address {
 
 /* ── MOBILE RESPONSIVE ── */
 
-/* @media screen and (width <= 1420px) {
+@media screen and (width <= 1420px) {
   .layout {
     flex-direction: column;
   }
@@ -723,4 +723,4 @@ address {
   .architecture__node-title {
     white-space: nowrap;
   }
-} */
+}
