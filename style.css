@@ -276,7 +276,8 @@ pre {
   flex: 1;
   flex-direction: column;
   gap: var(--flex-gap);
-  min-width: 0;
+
+  /* min-width: 0; */
   max-width: 1000px;
   padding: 24px;
   background-color: var(--bg);
@@ -300,7 +301,8 @@ pre {
   flex: 1;
   flex-direction: column;
   gap: 12px;
-  min-width: 0;
+
+  /* min-width: 0; */
   padding: 24px;
   border: 1px solid var(--border);
   border-radius: 3px;
@@ -486,12 +488,12 @@ pre {
 
 .architecture-container {
   /* min-width: 0; */
-  overflow: auto;
 }
 
 .architecture {
-  min-width: max-content;
+  max-width: 100%;
   padding: 14px 16px 16px;
+  overflow: auto;
   background: var(--arch-bg);
   border: 1px solid var(--border);
   border-radius: 3px;
@@ -500,6 +502,7 @@ pre {
 .architecture__diagram {
   display: grid;
   align-items: center;
+  width: max-content;
 }
 
 .architecture__node {
