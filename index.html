@@ -134,7 +134,8 @@
               있습니다. 그러나 기초적인 경제·투자 지식이 부족해 관련 정보를 습득하고 실제 투자에
               활용하는 데 어려움을 겪는 경우가 많습니다. 저 역시 이런 어려움을 느끼며 기초 지식
               학습의 필요성을 체감했고, 누구나 쉽고 경제·투자 기초를 학습할 수 있도록 돕기 위해 이
-              프로젝트를 기획했습니다.
+              프로젝트를 기획했습니다. 팀원 1명과 함께 2인 팀으로 진행했으며, 저는 백엔드 개발을
+              담당했습니다.
             </p>
             <nav class="project__nav">
               <a href="https://economic-quiz.netlify.app/" class="project__link">
@@ -432,16 +433,13 @@
                     <h5 class="project__troubleshooting-title">
                       JSDoc 환경에서 객체의 키로 동적 접근 시 타입 시스템이 'any'로 추론
                     </h5>
+                    <pre>
+@typedef {Record&lt;'GET' | 'POST', Object.&lt;string, HttpHandler&gt;&gt;}QuizRouter
+const controller = quizRouter[method][url];
+
+if (!quizRouter[method]) {...}</pre
+                    >
                     <p class="project__troubleshooting-desc">
-                      <code
-                        >@typedef {Record&lt;'GET' | 'POST', Object.&lt;string,
-                        HttpHandler&gt;&gt;}QuizRouter</code
-                      >
-                      <br />
-                      <code>const controller = quizRouter[method][url];</code>
-                      <br />
-                      <code>if (!quizRouter[method]) {...}</code>
-                      <br />
                       런타임에서는 이미 <code>if (!quizRouter[method])</code>로 잘못된 값을 걸러내고
                       있었지만, 타입 시스템은 이를 인지하지 못해 <code>any</code>타입 경고가
                       발생했다.
@@ -453,14 +451,18 @@
                       마음에 걸렸고 <code>string</code>은 범위가 지나치게 넓어
                       의도(<code>method</code>가 <code>GET</code>, <code>POST</code> 같은 특정 값만
                       가진다는 것)를 충분히 표현하지 못한다고 느꼈다. 찾아보니 타입 가드 함수를
-                      사용하면 원하는 타입의 범위로 좁힐 수 있을 것 같았다. <br /><code>/**</code
-                      ><br />
-                      <code>* @param {string} method</code><br />
-                      <code>* @returns {method is keyof typeof quizRouter}</code><br />
-                      <code>*/</code><br />
-                      <code>function isValidMethod(method) {</code><br />
-                      <code>return method in quizRouter;</code><br />
-                      <code>}</code><br />
+                      사용하면 원하는 타입의 범위로 좁힐 수 있을 것 같았다.
+                    </p>
+                    <pre>
+/**
+* @param {string} method
+* @returns {method is keyof typeof quizRouter}
+*/
+function isValidMethod(method) {
+  return method in quizRouter;
+}</pre
+                    >
+                    <p class="project__troubleshooting-desc">
                       <code>@returns</code>에 타입 서술어(<code
                         >method is keyof typeof quizRouter</code
                       >)를 명시함으로써, <code>isValidMethod(method)</code>가 <code>true</code>를
@@ -484,30 +486,28 @@
           </article>
           <article class="project">
             <header class="project__header">
-              <h3 class="project__title">스마트 스토어 최저가 봇</h3>
+              <h3 class="project__title">스마트 스토어 최저가 봇 리팩토링</h3>
               <p class="project__date"><time datetime="2026-06-13">2026.6.13</time> – Ongoing</p>
             </header>
             <p class="project__desc">
-              경제 용어에 익숙하지 않은 입문자가 퀴즈를 통해 반복 학습할 수 있도록 만든 웹 기반 경제
-              학습 서비스
+              3~4년 전 지인의 부탁으로 시작한, 네이버 쇼핑 가격비교 페이지의 판매처별 가격을 자동
+              수집해 설정한 최소 금액 내에서 최저가로 판매가를 조정하는 자동화 프로그램입니다.
+              <code>네이버 커머스 API</code>로 상품을 조회·수정하고,
+              <code>Google Sheets API</code>로 제품 정보를 관리하며, <code>Puppeteer</code>로
+              판매처별 가격을 수집하는 구조로 동작합니다. 초기엔 크롬 확장 프로그램으로 관리자
+              페이지를 제어하다가 <code>fetch</code>와 <code>DOMParser</code>로 데이터를 파싱하는
+              방식, 이후 <code>Puppeteer</code> 기반으로 실제 브라우저 흐름을 따르는 방식까지,
+              네이버의 UI·로직 변경에 대응하며 지금까지 사용해왔습니다.
+            </p>
+            <p class="project__desc">
+              그 과정에서 불필요한 코드들이 쌓여 구조가 복잡해졌고, 최근 가격 노출 기준 변경에
+              맞추어 수정할 겸 코드를 정리하기로 했습니다. 역할별 폴더 구조로 재구성하고, 매직
+              넘버·문자열을 상수화하고, <code>.env</code>로 민감 정보를 분리하는 등 유지보수에
+              유리한 구조로 리팩토링을 진행했습니다. 변수·함수명을 의미가 드러나도록 다시 짓고
+              함수를 단일 책임 단위로 분리했으며, 테스트 코드와 <code>README</code>를 작성해 실행
+              흐름을 문서화했습니다.
             </p>
             <nav class="project__nav">
-              <a href="#" class="project__link">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" class="project__icon">
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <circle cx="7" cy="7" r="6.5" />
-                    <path
-                      d="M.5 7h13m-4 0A11.22 11.22 0 0 1 7 13.5A11.22 11.22 0 0 1 4.5 7A11.22 11.22 0 0 1 7 .5A11.22 11.22 0 0 1 9.5 7Z"
-                    />
-                  </g>
-                </svg>
-                Web
-              </a>
               <a href="#" class="project__link">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="project__icon">
                   <path
@@ -622,23 +622,46 @@
               </div>
             </div>
             <div class="project__details">
-              <section class="project__list-section-section">
+              <section class="project__list-section">
                 <h4 class="project__section-title">RESPONSIBILITIES</h4>
                 <ul class="project__list-section-list">
-                  <li class="project__list-section-item"><code>Express</code> 서버 구축</li>
-                  <li class="project__list-section-item"><code>REST API</code> 개발</li>
-                  <li class="project__list-section-item"><code>MongoDB Atlas</code> 데이터 설계</li>
-                  <li class="project__list-section-item"><code>Render</code> 배포</li>
-                  <li class="project__list-section-item"><code>Figma</code> 기반 UI/UX 설계</li>
+                  <li class="project__list-section-item">
+                    <h5 class="project__list-section-item-title">프로젝트 구조 리팩토링</h5>
+                    <ul class="project__list-section-list project__list-section-list--sub">
+                      <li class="project__list-section-item project__list-section-item--sub">
+                        프로젝트 구조를 역할별 폴더로 재구성
+                      </li>
+                      <li class="project__list-section-item project__list-section-item--sub">
+                        매직 넘버/문자열 상수화
+                      </li>
+                      <li class="project__list-section-item project__list-section-item--sub">
+                        <code>.env</code>로 민감 정보(인증키 등) 분리 관리
+                      </li>
+                      <li class="project__list-section-item project__list-section-item--sub">
+                        변수명·함수명 의미 명확화
+                      </li>
+                      <li class="project__list-section-item project__list-section-item--sub">
+                        함수를 단일 책임 단위로 분리
+                      </li>
+                      <li class="project__list-section-item project__list-section-item--sub">
+                        불필요한 주석 정리
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="project__list-section-item">
+                    <h5 class="project__list-section-item-title">테스트 / 문서화</h5>
+                    <ul class="project__list-section-list project__list-section-list--sub">
+                      <li class="project__list-section-item project__list-section-item--sub">
+                        터미널 명령으로 실행하는 테스트 코드 작성
+                      </li>
+                      <li class="project__list-section-item project__list-section-item--sub">
+                        실행 흐름 <code>README</code> 작성
+                      </li>
+                    </ul>
+                  </li>
                 </ul>
               </section>
-              <section class="project__todo-section">
-                <h4 class="project__section-title">To Do</h4>
-                <ul class="project__todo-list">
-                  <li class="project__todo-item">리팩토링</li>
-                  <li class="project__todo-item">Spindown 문제 해결</li>
-                </ul>
-              </section>
+
               <section class="project__troubleshooting-section">
                 <h4 class="project__section-title">TROUBLESHOOTING</h4>
                 <article class="project__troubleshooting-item">
