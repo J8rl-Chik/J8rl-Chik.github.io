@@ -666,9 +666,29 @@ function isValidMethod(method) {
                 <h4 class="project__section-title">TROUBLESHOOTING</h4>
                 <article class="project__troubleshooting-item">
                   <h5 class="project__troubleshooting-title">
-                    협업 환경에서 배포 권한 문제로 팀원의 배포가 실패함
+                    주석으로 남겨둔 코드를 정리하다가, 실제로 필요한 로직을 함께 제거해 장애 발생
                   </h5>
-                  <p class="project__troubleshooting-desc">이것은 본문</p>
+                  <p class="project__troubleshooting-desc">
+                    현재는 Git으로 모든 변경 사항을 커밋 단위로 기록하고 있어 과거 코드가 필요하면
+                    Git 히스토리를 확인하는 게 더 효율적이라고 판단해, 더 이상 쓰지 않는 코드는
+                    과감히 제거하기로 했다. 정리 중
+                    <code>delete productWithoutContent.detailContent;</code>라는 코드를 단순 속성
+                    제거로 오해해 함께 삭제했는데, 실제로는 상세 페이지가 원래 형태를 유지하게
+                    막아주는 코드였다. 결과적으로 상품 수정 시 상세 페이지가 HTML 구조로 강제
+                    변환되는 문제가 발생해, 판매중인 모든 상품을 3시간에 걸쳐 직접 수정해야 했다.
+                  </p>
+                  <h5 class="project__troubleshooting-title">해결 /재발 방지</h5>
+                  <p class="project__troubleshooting-desc">
+                    이 경험 이후, "사용하지 않는 것처럼 보이는 코드"와 "왜 반드시 필요한지 알아야
+                    하는 코드"를 구분하기로 했다. 코드를 짧게 줄이는 것과, 코드가 존재해야 하는
+                    이유를 보존하는 것은 서로 다른 문제라는 걸 깨달았기 때문이다. 동작이 직관적이지
+                    않은 코드라면 불필요한 주석은 걷어내더라도, "왜 필요한지"는 반드시 남기기로
+                    정했다. 과거에 작성한 코드라도 시간이 지나면 작성자 본인조차 의도를 잊을 수
+                    있으므로, 주석은 결국 미래의 자신을 위한 기록이라는 점도 체감했다.
+                  </p>
+                  <pre>
+delete originProduct.detailContent; // 상세페이지가 HTML 형태로 강제 변경되는 것을 방지</pre
+                  >
                 </article>
               </section>
             </div>

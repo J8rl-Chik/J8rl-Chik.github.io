@@ -428,7 +428,7 @@ pre {
 .project__list-section-item,
 .project__todo-item {
   flex: 1 1 calc(50% - 3px);
-  padding-left: 12px;
+  padding-left: 14px;
   font-size: 15px;
   color: var(--text);
 }
@@ -439,13 +439,10 @@ pre {
 }
 
 .project__list-section-item--sub::before {
-  /* position: absolute; */
-
-  /* top: 50%; */
-
-  /* left: 3px; */
-
-  /* line-height: 0; */
+  position: absolute;
+  top: 9px;
+  left: 6px;
+  line-height: 0;
   content: '•';
 }
 
