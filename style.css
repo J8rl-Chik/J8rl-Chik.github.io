@@ -14,6 +14,7 @@
   --color-border-strong: #d1d1d1; /* 강조 구분선/테두리  */
   --color-bg-code: #f0f0f0; /* 코드 요소의 배경 */
   --color-bg-diagram: #fafafa; /* 다이어그램 배경 */
+  --color-accent: #0064ff; /* 섹션 대제목 강조 바 */
 }
 
 body {
@@ -453,10 +454,12 @@ mark {
 .project__section-title,
 .project__screenshots-title,
 .architecture__title {
+  padding-left: 10px;
   margin-bottom: 8px;
   font-size: 18px;
   font-weight: 500;
   color: var(--color-text-primary);
+  border-left: 4px solid var(--color-accent);
 }
 
 .project__list-section,
