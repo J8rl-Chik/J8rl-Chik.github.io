@@ -275,14 +275,28 @@ pre {
   background: #000;
 }
 
+.tech-stack__badge--Claude {
+  color: #fff;
+  background: #da7756;
+}
+
+.tech-stack__badge--Claude-Code {
+  color: #fff;
+  background: #b3563f;
+}
+
+.tech-stack__badge--Gemini {
+  color: #fff;
+  background: #1a73e8;
+}
+
 /* ── MAIN ── */
 .main {
   display: flex;
   flex: 1;
   flex-direction: column;
   gap: var(--flex-gap);
-
-  /* min-width: 0; */
+  min-width: 0;
   max-width: 1000px;
   padding: 24px;
   background-color: var(--bg);
@@ -376,14 +390,17 @@ pre {
 }
 
 .project__screenshot-img {
+  display: block;
   width: 100%;
   object-fit: cover;
   border: solid 1px var(--border);
 }
 
 .project__screenshot-desc {
+  /* margin-top: 4px; */
   font-size: 14px;
-  line-height: 1;
+
+  /* line-height: 1; */
   color: var(--text-secondary);
   text-align: center;
 }
@@ -475,8 +492,8 @@ pre {
 }
 
 .project__troubleshooting-title {
-  font-size: 24px;
-  font-weight: 500;
+  font-size: 20px;
+  font-weight: 600;
 }
 
 .project__troubleshooting-title:first-of-type::before {
@@ -499,6 +516,7 @@ pre {
 
 .architecture {
   /* width: max-content; */
+  min-width: max-content;
   padding: 14px 16px 16px;
   background: var(--arch-bg);
   border: 1px solid var(--border);
@@ -744,32 +762,80 @@ pre {
   color: #00684a;
 }
 
-/* ── MOBILE RESPONSIVE ── */
+/* ── RESPONSIVE ── */
 
-@media screen and (width <= 1420px) {
+@media screen and (width <= 1320px) {
   .layout {
     flex-direction: column;
   }
 
   .sidebar-container {
     position: static;
+    height: auto;
+    border-right: none;
   }
 
   .sidebar {
     width: 100%;
-    border-right: none;
-    border-bottom: 1px solid var(--border);
   }
 
   .main {
     padding: 20px;
   }
 
-  .architecture {
+  .main__title {
+    font-size: 16px;
+  }
+
+  .project {
+    gap: 6px;
+    padding: 0;
+    border: none;
+  }
+
+  .project__section-title {
+    margin-bottom: 4px;
+  }
+
+  /* .architecture {
     width: max-content;
+  } */
+
+  .project__list-section-list {
+    gap: 3px;
   }
 
   .architecture__node-title {
     white-space: nowrap;
+  }
+}
+
+@media screen and (width <= 762px) {
+  .project__screenshot-container {
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .project__screenshot {
+    flex-basis: calc(50% - 3px);
+  }
+
+  .project__list-section-item {
+    flex-basis: 100%;
+  }
+
+  .project__troubleshooting-title {
+    font-size: 18px;
+  }
+}
+
+@media screen and (width <= 480px) {
+  .project__title {
+    font-size: 20px;
+  }
+
+  .project__section-title,
+  .project__troubleshooting-title {
+    font-size: 16px;
   }
 }
