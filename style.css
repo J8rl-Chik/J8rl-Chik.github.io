@@ -345,7 +345,7 @@ mark {
 .project-container {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 40px;
 }
 
 .project {
@@ -550,14 +550,14 @@ mark {
 
 /* ── ARCHITECTURE ── */
 
-.architecture-container {
+.architecture {
   /* min-width: 0; */
 
   /* width: 100%; */
   overflow: auto;
 }
 
-.architecture {
+.architecture__diagram-container {
   /* width: max-content; */
   min-width: max-content;
   padding: 14px 16px 16px;
@@ -836,11 +836,16 @@ mark {
     border: none;
   }
 
+  .project + .project {
+    padding-top: 32px;
+    border-top: 1px solid var(--color-border-strong);
+  }
+
   .project__section-title {
     margin-bottom: 4px;
   }
 
-  /* .architecture {
+  /* .architecture__diagram-container {
     width: max-content;
   } */
 
