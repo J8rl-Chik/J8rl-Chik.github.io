@@ -62,6 +62,23 @@ pre {
   clip-path: inset(50%);
 }
 
+.skip-link {
+  position: absolute;
+  top: -42px;
+  left: 8px;
+
+  /* z-index: 100; */
+  padding: 8px 16px;
+  color: var(--color-text-primary);
+  background: var(--color-bg-primary);
+  border: 1px solid var(--color-border-strong);
+  border-radius: 3px;
+}
+
+.skip-link:focus-visible {
+  top: 8px;
+}
+
 /* ── LAYOUT ── */
 .layout {
   display: flex;
