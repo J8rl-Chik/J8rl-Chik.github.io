@@ -482,7 +482,8 @@ mark {
 
 .project__list-section-item-title {
   width: 100%;
-  font-size: 15px;
+  font-size: 16px;
+  font-weight: 700;
 }
 
 .project__list-section-item,
@@ -535,7 +536,7 @@ mark {
 }
 
 .project__troubleshooting-title {
-  font-size: 20px;
+  font-size: 17px;
   font-weight: 600;
 }
 
@@ -874,7 +875,7 @@ mark {
   }
 
   .project__troubleshooting-title {
-    font-size: 18px;
+    font-size: 16px;
   }
 }
 
