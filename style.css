@@ -369,8 +369,8 @@ mark {
 
 .project__title {
   font-size: 24px;
-  font-weight: 600;
-  color: var(--color-text-primary);
+  font-weight: 700;
+  color: var(--color-accent);
 }
 
 .project__date {
