@@ -137,7 +137,7 @@ mark {
 .education__title,
 .tech-stack__title {
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 700;
   color: var(--color-text-muted);
 }
 
@@ -338,7 +338,7 @@ mark {
 
 .main__title {
   font-size: 20px;
-  font-weight: 500;
+  font-weight: 700;
   color: var(--color-text-muted);
 }
 
